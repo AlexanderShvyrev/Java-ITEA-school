@@ -9,7 +9,7 @@ public class ArithmeticAverage_HW6 {
         double x = sc.nextInt();
         double y = sc.nextInt();
         double z = sc.nextInt();
-        double ArAv = (x + y + z) / 3;
-        System.out.println("Arithmetic average of your numbers is " + ArAv);
+        double arAv = (x + y + z) / 3;
+        System.out.println("Arithmetic average of your numbers is " + arAv);
     }
 }
