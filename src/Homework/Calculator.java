@@ -8,8 +8,8 @@ public class Calculator {
         double operand2 = 3;
         System.out.println("Please enter type of operator");
         Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        switch(input){
+        String sign = sc.nextLine();
+        switch(sign){
             case "*":
                 System.out.println(operand1 * operand2);
                 break;
