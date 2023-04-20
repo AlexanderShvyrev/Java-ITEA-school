@@ -6,6 +6,7 @@ public class Delivery {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = 0;
+        boolean checkStringVal = false;
         do {
             System.out.println("Please enter the number of customers (enter exit to quit the program): ");
             if (sc.hasNextInt()) {
@@ -31,9 +32,10 @@ public class Delivery {
                     break;
                 }else{
                     System.out.println("Incorrect input! Please enter a valid integer.");
+                    checkStringVal = true;
                 }
             }
-        } while (true);
+        } while (num != 0 || checkStringVal);
         sc.close();
     }
 }
