@@ -32,10 +32,20 @@ public class NumbersCheck {
             System.out.println("Your number is not simple");
         }
 
-        if(num % 2 == 0 && num % 5 == 0 && num % 3 == 0 && num % 6 == 0 && num % 9 == 0){
-            System.out.println("Num is divisible by 2,5,3,6,9 with no remainder");
-        }else{
-            System.out.println("Num is not divisible by either 2,5,3,6,9 with no remainder");
+        if (num % 2 == 0) {
+            System.out.println("The number is divisible by 2 without a remainder.");
+        }
+        if (num % 5 == 0) {
+            System.out.println("The number is divisible by 5 without a remainder.");
+        }
+        if (num % 3 == 0) {
+            System.out.println("The number is divisible by 3 without a remainder.");
+        }
+        if (num % 6 == 0) {
+            System.out.println("The number is divisible by 6 without a remainder.");
+        }
+        if (num % 9 == 0) {
+            System.out.println("The number is divisible by 9 without a remainder.");
         }
     }
 }
