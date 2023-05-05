@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class PowerA3 {
-
     public static int powerA3(int a) {
         return a * a * a;
     }

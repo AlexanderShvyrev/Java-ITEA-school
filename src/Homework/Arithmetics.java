@@ -35,7 +35,7 @@ public class Arithmetics {
                 System.out.println(mul(firstArg, secondArg));
                 break;
             case "/":
-                if(secondArg > 0 || secondArg < 0){
+                if(secondArg != 0){
                     System.out.println(div(firstArg, secondArg));
                 }else {
                     System.out.println("Error: cannot divide by zero");
