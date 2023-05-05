@@ -16,7 +16,6 @@ public class MinMaxMid {
     public static void minMaxMid(float[] nums){
         float min = nums[0];
         float max = nums[0];
-        float mid;
         float sum = 0f;
         for (int i = 0; i < nums.length ; i++) {
             if(nums[i] < min){
@@ -27,10 +26,10 @@ public class MinMaxMid {
             }
             sum += nums[i];
         }
-        mid = sum/nums.length;
-        System.out.print("Min number is: " + min + ". ");
-        System.out.print("Max number is: " + max + ". ");
-        System.out.print("Mid number is: " + mid);
+        float mid = (sum/nums.length);
+        System.out.println("Min number is: " + min + ". ");
+        System.out.println("Max number is: " + max + ". ");
+        System.out.println("Mid number is: " + mid);
     }
     public static void main(String[] args) {
         float[] nums = new float[]{arithmetic(1,2,3), arithmetic(1,2,3,4), arithmetic(1,2,3,4,5)};

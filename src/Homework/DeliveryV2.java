@@ -3,7 +3,7 @@ package Homework;
 public class DeliveryV2 {
 
     public static int calculateRoutes(int customers){
-        if(customers == 0){
+        if(customers == 1){
             return 1;
         }
         return customers * calculateRoutes(customers - 1);
