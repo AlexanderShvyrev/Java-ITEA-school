@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ReversedArray {
 
-    public static int[] reverse(int[] array){
+    public static int[] myReverse(int[] array){
         int[] reversed = new int[array.length];
         for (int i = 0; i < array.length ; i++) {
             reversed[i] = array[array.length - 1 - i];
@@ -24,7 +24,7 @@ public class ReversedArray {
         return subArray;
     }
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(reverse(new int[] {1,2,3,4,5})));
+        System.out.println(Arrays.toString(myReverse(new int[] {1,2,3,4,5})));
         System.out.println(Arrays.toString(subArray(new int[] {1,2,3,4,5}, 2, 10)));
     }
 }
