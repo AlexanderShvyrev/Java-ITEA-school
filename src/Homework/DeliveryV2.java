@@ -11,6 +11,6 @@ public class DeliveryV2 {
     public static void main(String[] args) {
         int customers = 10;
         int routes = calculateRoutes((customers));
-        System.out.println("You could have " + routes);
+        System.out.println("You could have " + routes + "routes");
     }
 }
