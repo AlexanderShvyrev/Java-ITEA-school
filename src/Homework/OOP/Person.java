@@ -4,11 +4,11 @@ public class Person {
 
     String fullName;
     int age;
-    static void move(String fullName){
+    public void move(String fullName){
         System.out.println(fullName + " is moving");
     }
 
-    static void talk(String fullName){
+    public void talk(String fullName){
         System.out.println(fullName + " is talking");
     }
 
