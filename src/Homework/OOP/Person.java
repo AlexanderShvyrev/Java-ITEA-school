@@ -4,11 +4,11 @@ public class Person {
 
     String fullName;
     int age;
-    public void move(String fullName){
+    public void move(){
         System.out.println(fullName + " is moving");
     }
 
-    public void talk(String fullName){
+    public void talk(){
         System.out.println(fullName + " is talking");
     }
 
@@ -24,10 +24,10 @@ public class Person {
         Person emptyPerson = new Person();
         emptyPerson.fullName = "Bob Vance";
         emptyPerson.age = 56;
-        emptyPerson.talk(emptyPerson.fullName);
-        emptyPerson.move(emptyPerson.fullName);
+        emptyPerson.talk();
+        emptyPerson.move();
         Person personWithConstructor = new Person("Bob Ross", 45);
-        personWithConstructor.move(personWithConstructor.fullName);
-        personWithConstructor.talk(personWithConstructor.fullName);
+        personWithConstructor.move();
+        personWithConstructor.talk();
     }
 }
