@@ -1,17 +1,17 @@
 package Homework.OOP;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Matrix {
+    public double[][] myArray;
+    public int rows;
+    public int cols;
 
-    double[][] myArray;
-    int rows;
-    int cols;
-
-    public Matrix(int rows, int cols) {
+    public Matrix(double[][] myArray, int rows, int cols) {
+        this.myArray = myArray;
         this.rows = rows;
         this.cols = cols;
-        myArray = new double[rows][cols];
     }
 
     public double[][] add(double[][] data){
@@ -49,13 +49,13 @@ public class Matrix {
         }
         return myArray;
     }
-
-
+    @Override
+    public String toString() {
+        return "Array: " + Arrays.deepToString(myArray) + ", Rows: " + rows + ", Cols: " + cols;
+    }
     public static void main(String[] args) {
-        Matrix matrix = new Matrix(2,3);
-        matrix.myArray = new double[][]{{32,45,65}, {234,456,78}};
-        System.out.println("Initial Matrix is: ");
-        matrix.displayMatrix();
+        Matrix matrix = new Matrix(new double[][]{{32,45,65}, {234,456,78}},2,3);
+        System.out.println(matrix);
         matrix.myArray = matrix.add(new double[][]{{23,523,564,}, {235,457,58}});
         System.out.println("Adding new array to initial matrix...");
         matrix.displayMatrix();
