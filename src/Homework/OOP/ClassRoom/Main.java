@@ -7,7 +7,12 @@ public class Main {
         Pupil badPupil = new BadPupil();
         Pupil regularPupil = new Pupil();
 
-        ClassRoom classRoom = new ClassRoom(excellentPupil, goodPupil, badPupil, regularPupil);
-        classRoom.teach();
+        ClassRoom classRoomA = new ClassRoom(excellentPupil, goodPupil, badPupil, regularPupil);
+        classRoomA.teach();
+        ClassRoom classRoomB = new ClassRoom(excellentPupil, goodPupil);
+        classRoomB.teach();
+        ClassRoom classRoomC = new ClassRoom(badPupil, badPupil, excellentPupil);
+        classRoomC.teach();
+        ClassRoom classRoomD = new ClassRoom(excellentPupil, goodPupil, badPupil,regularPupil,regularPupil);
     }
 }
