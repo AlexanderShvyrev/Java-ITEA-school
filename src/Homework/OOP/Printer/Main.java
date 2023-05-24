@@ -5,12 +5,13 @@ public class Main {
         Printer printer = new Printer();
         printer.print("Hello world");
 
-        Printer colorPrinter = new PrinterOne();
-        colorPrinter.generateColor("red");
-        colorPrinter.print("Hello world");
+        Printer colorPrinter = new ColorPrinter();
+        ((ColorPrinter) colorPrinter).generateColor("red");
+        colorPrinter.print("You are red here, Andrei");
 
-        Printer anotherPrinter = new PrinterTwo();
-        anotherPrinter.generateColor("yellow");
-        anotherPrinter.print("This text is yellow");
+        Printer anotherPrinter = new ColorPrinter();
+        ColorPrinter colorfulAnotherPrinter = (ColorPrinter) anotherPrinter;
+        colorfulAnotherPrinter.generateColor("yellow");
+        colorfulAnotherPrinter.print("You are yellow here, Andrei");
     }
 }
