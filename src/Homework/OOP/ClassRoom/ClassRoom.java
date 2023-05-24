@@ -10,8 +10,17 @@ public class ClassRoom {
         this.pupils = pupils;
     }
 
+    public Pupil[] getPupils() {
+        return pupils;
+    }
+
+    public ClassRoom setPupils(Pupil[] pupils) {
+        this.pupils = pupils;
+        return this;
+    }
+
     public void teach(){
-        for (Pupil pupil : pupils){
+        for (Pupil pupil : this.getPupils()){
             pupil.study();
             pupil.read();
             pupil.write();
