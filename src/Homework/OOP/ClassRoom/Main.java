@@ -14,5 +14,6 @@ public class Main {
         ClassRoom classRoomC = new ClassRoom(badPupil, badPupil, excellentPupil);
         classRoomC.teach();
         ClassRoom classRoomD = new ClassRoom(excellentPupil, goodPupil, badPupil,regularPupil,regularPupil);
+        classRoomD.teach();
     }
 }
