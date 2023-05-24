@@ -33,9 +33,7 @@ public class Ship extends Vehicle {
     @Override
     public void displayInfo(){
         System.out.println("Ship stats:");
-        System.out.println("Price: " + this.getPrice());
-        System.out.println("Speed: " + this.getSpeed());
-        System.out.println("Year: " + this.getYear());
+        super.displayInfo();
         System.out.println("Number of Passengers: " + this.getPassengers());
         System.out.println("Port of Origin: " + this.getPortOfOrigin());
     }

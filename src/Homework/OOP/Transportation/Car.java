@@ -8,8 +8,6 @@ public class Car extends Vehicle {
     @Override
     public void displayInfo() {
         System.out.println("Car stats:");
-        System.out.println("Price: " + this.getPrice());
-        System.out.println("Speed: " + this.getSpeed());
-        System.out.println("Year: " + this.getYear());
+        super.displayInfo();
     }
 }

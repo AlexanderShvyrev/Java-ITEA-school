@@ -31,9 +31,7 @@ public class Plane extends Vehicle{
     @Override
     public void displayInfo(){
         System.out.println("Plane stats: ");
-        System.out.println("Price: " + this.getPrice());
-        System.out.println("Speed: " + this.getSpeed());
-        System.out.println("Year: " + this.getYear());
+        super.displayInfo();
         System.out.println("Height: " + this.getHeight());
         System.out.println("Number of Passengers: " + this.getPassengers());
 
