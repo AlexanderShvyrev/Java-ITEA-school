@@ -23,7 +23,7 @@ public class CheckCar {
         vehicles.add(vehicle);
     }
 
-    public void getFastestVehicle(){
+    public Vehicle getFastestVehicle(){
         Vehicle fastest = null;
         int maxSpeed = 0;
         for (Vehicle vehicle : vehicles) {
@@ -32,18 +32,10 @@ public class CheckCar {
                 fastest = vehicle;
             }
         }
-        if(fastest != null){
-            System.out.println("FASTEST VEHICLE");
-            System.out.println("Brand: " + fastest.getModel());
-            System.out.println("Power: " + (int)fastest.getPower());
-            System.out.println("Speed: " + fastest.getSpeed());
-            System.out.println("Price: " + fastest.getPrice());
-            System.out.println("Year: " + fastest.getYearOfManufacture());
-            System.out.println();
-        }
+        return fastest;
     }
 
-    public void getMostExpensiveVehicle(){
+    public Vehicle getMostExpensiveVehicle(){
         Vehicle mostExpensive = null;
         double maxPrice = 0.0;
         for (Vehicle vehicle : vehicles) {
@@ -52,18 +44,10 @@ public class CheckCar {
                 mostExpensive = vehicle;
             }
         }
-        if(mostExpensive != null){
-            System.out.println("MOST EXPENSIVE VEHICLE");
-            System.out.println("Brand: " + mostExpensive.getModel());
-            System.out.println("Power: " + (int)mostExpensive.getPower());
-            System.out.println("Speed: " + mostExpensive.getSpeed());
-            System.out.println("Price: " + mostExpensive.getPrice());
-            System.out.println("Year: " + mostExpensive.getYearOfManufacture());
-            System.out.println();
-        }
+        return mostExpensive;
     }
 
-    public void getMostPowerfulVehicle(){
+    public Vehicle getMostPowerfulVehicle(){
         Vehicle mostPowerful = null;
         double maxPower = 0.0;
         for (Vehicle vehicle : vehicles) {
@@ -72,14 +56,6 @@ public class CheckCar {
                 mostPowerful = vehicle;
             }
         }
-        if(mostPowerful != null){
-            System.out.println("MOST POWERFUL VEHICLE");
-            System.out.println("Brand: " + mostPowerful.getModel());
-            System.out.println("Power: " + (int)mostPowerful.getPower());
-            System.out.println("Speed: " + mostPowerful.getSpeed());
-            System.out.println("Price: " + mostPowerful.getPrice());
-            System.out.println("Year: " + mostPowerful.getYearOfManufacture());
-            System.out.println();
-        }
+        return mostPowerful;
     }
 }

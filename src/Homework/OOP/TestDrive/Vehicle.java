@@ -1,6 +1,6 @@
 package Homework.OOP.TestDrive;
 
-public class Vehicle {
+public abstract class Vehicle {
     private String model;
     private double power;
     private int speed;
@@ -14,13 +14,10 @@ public class Vehicle {
         setPrice(price);
     }
 
+    public abstract void check();
+
     public String getModel() {
         return model;
-    }
-
-    public Vehicle setModel(String model) {
-        this.model = model;
-        return this;
     }
 
     public double getPower() {
