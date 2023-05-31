@@ -1,6 +1,6 @@
 package Homework.OOP.TestDrive;
 
-public abstract class Vehicle {
+public abstract class Vehicle{
     private String model;
     private double power;
     private int speed;

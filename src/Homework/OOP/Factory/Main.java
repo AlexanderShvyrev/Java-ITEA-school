@@ -1,14 +1,17 @@
 package Homework.OOP.Factory;
 
+import Homework.OOP.Factory.Interfaces.Furniture;
 import Homework.OOP.Factory.Interfaces.Producable;
 import Homework.OOP.Factory.Production.ArtDecoProduction;
 import Homework.OOP.Factory.Production.ModernProduction;
 import Homework.OOP.Factory.Production.VictorianProduction;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         while(true){
             System.out.println("What furniture set would you like to purchase?");
@@ -18,26 +21,33 @@ public class Main {
             String version = sc.nextLine();
             System.out.println("You chose: " + version);
 
-            Producable factory = null;
-            switch (version) {
-                case "1":
-                    factory = new ArtDecoProduction();
-                    break;
-                case "2":
-                    factory = new VictorianProduction();
-                    break;
-                case "3":
-                    factory = new ModernProduction();
-                    break;
-                default:
-                    throw new Error("Invalid choice. Exiting.");
-            }
+            Producable factory;
+                switch (version) {
+                    case "1" -> factory = new ArtDecoProduction();
+                    case "2" -> factory = new VictorianProduction();
+                    case "3" -> factory = new ModernProduction();
+                    default -> {
+                        System.out.println("Invalid choice.");
+                        continue;
+                    }
+            };
+            try{
+                List<Furniture> furniture = new ArrayList<>();
+                furniture.add(factory.createArmchair());
+                furniture.add(factory.createSofa());
+                furniture.add(factory.createTable());
 
-            Warehouse warehouse = new Warehouse();
-            warehouse.addFurniture(factory.createArmchair());
-            warehouse.addFurniture(factory.createSofa());
-            warehouse.addFurniture(factory.createTable());
-            warehouse.printInvoice();
+                System.out.println("Detailed description:");
+                double totalAmount = 0;
+
+                for (Furniture item : furniture) {
+                    System.out.println(item.getTitle() + " - UAH " + item.getPrice());
+                    totalAmount += item.getPrice();
+                }
+                System.out.println("Total amount: UAH " + totalAmount);
+            }catch(Exception e){
+                throw new Exception("Invalid input");
+            }
 
             System.out.println("Continue shopping? (Y/N)");
             String choice = sc.nextLine().toUpperCase();

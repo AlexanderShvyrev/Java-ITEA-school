@@ -2,7 +2,7 @@ package Homework.OOP.Factory.Items;
 
 import Homework.OOP.Factory.Interfaces.Furniture;
 
-public class Sofa implements Furniture {
+public class Sofa implements Homework.OOP.Factory.Interfaces.Sofa {
     private String title;
     private double price;
 
