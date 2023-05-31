@@ -26,7 +26,7 @@ public abstract class Vehicle {
 
     public void setPower(double power) {
         if (power <= 0 || power >= 200) {
-            throw new IllegalArgumentException("Power must be between 0 and 200");
+            throw new Error("Power must be between 0 and 200");
         }
         this.power = power;
     }
@@ -37,7 +37,7 @@ public abstract class Vehicle {
 
     public void setSpeed(int speed) {
         if (speed <= 0 || speed >= 320) {
-            throw new IllegalArgumentException("Speed must be greater than 0 and less than 320");
+            throw new Error("Speed must be greater than 0 and less than 320");
         }
         this.speed = speed;
     }
@@ -48,7 +48,7 @@ public abstract class Vehicle {
 
     public void setPrice(double price) {
         if (price < 0.0 || price > 50000.0) {
-            throw new IllegalArgumentException("Price cannot be less than 0 or greater than 50000");
+            throw new Error("Price cannot be less than 0 or greater than 50000");
         }
         this.price = price;
     }
