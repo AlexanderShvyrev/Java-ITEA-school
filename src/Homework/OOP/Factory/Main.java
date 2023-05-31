@@ -1,5 +1,10 @@
 package Homework.OOP.Factory;
 
+import Homework.OOP.Factory.Interfaces.Producable;
+import Homework.OOP.Factory.Production.ArtDecoProduction;
+import Homework.OOP.Factory.Production.ModernProduction;
+import Homework.OOP.Factory.Production.VictorianProduction;
+
 import java.util.Scanner;
 
 public class Main {
@@ -12,16 +17,28 @@ public class Main {
             System.out.println("Enter 3 for Modern");
             String version = sc.nextLine();
             System.out.println("You chose: " + version);
-            System.out.println("Here is you invoice: ");
-            double total = 0.0;
 
-            String[] types = {"Armchair", "Sofa", "Table"};
-            for (String type: types) {
-                IFurniture furniture = Production.produceFurniture(version, type);
-                total += furniture.getPrice();
-                System.out.println(type + " - \"" + furniture.getTitle() + "\", UAH " + furniture.getPrice() + ".");
+            Producable factory = null;
+            switch (version) {
+                case "1":
+                    factory = new ArtDecoProduction();
+                    break;
+                case "2":
+                    factory = new VictorianProduction();
+                    break;
+                case "3":
+                    factory = new ModernProduction();
+                    break;
+                default:
+                    throw new Error("Invalid choice. Exiting.");
             }
-            System.out.println("Total amount: " + total);
+
+            Warehouse warehouse = new Warehouse();
+            warehouse.addFurniture(factory.createArmchair());
+            warehouse.addFurniture(factory.createSofa());
+            warehouse.addFurniture(factory.createTable());
+            warehouse.printInvoice();
+
             System.out.println("Continue shopping? (Y/N)");
             String choice = sc.nextLine().toUpperCase();
             if (!choice.equals("Y")) {

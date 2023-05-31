@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Player player = new Player();
 
-        player.play();
-        player.pause();
-        player.stop();
+        ((Playable) player).play();
+        ((Playable) player).pause();
+        ((Playable) player).stop();
 
-        player.record();
-        player.pause();
-        player.stop();
+        ((Recordable) player).record();
+        ((Recordable) player).pause();
+        ((Recordable) player).stop();
     }
 }
