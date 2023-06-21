@@ -1,11 +1,13 @@
 package Homework.OOP.MyClass;
 
-public class MyClass {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MyClass<T> {
     private MyClass() {
     }
 
-    public static <T> Object factoryMethod(){
-        Object obj = new Object();
-        return obj;
+    public static <T> List<T> factoryMethod(){
+        return new ArrayList<>();
     }
 }
