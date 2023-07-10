@@ -1,4 +1,4 @@
-package Homework.Lists.DobleValues;
+package Homework.Lists.DoubleValues;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,7 @@ public class Main {
         for (String word:words) {
             System.out.println(word);
         }
+        sc.close();
     }
 
     public static void doubleWords(List<String> words){
