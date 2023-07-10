@@ -6,19 +6,15 @@ import java.util.Scanner;
 
 public class Rows {
     public static void main(String[] args) {
-        List<String> lines = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
         System.out.println("Enter lines (type 'end' to stop): ");
-        while(true){
-            String line = sc.nextLine();
-            if(line.equalsIgnoreCase("end")){
-                break;
-            }
-            lines.add(line);
+
+        String line;
+        while(!(line = sc.nextLine()).equals("end")){
+            sb.append(line).append("\n");
         }
-        System.out.println("Your output: ");
-        for (String line : lines) {
-            System.out.println(line);
-        }
+
+        System.out.println(sb.toString());
     }
 }
