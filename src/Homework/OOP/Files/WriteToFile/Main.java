@@ -1,4 +1,4 @@
-package Homework.OOP.Files.CreateFile.WriteToFile;
+package Homework.OOP.Files.WriteToFile;
 
 import java.io.*;
 
