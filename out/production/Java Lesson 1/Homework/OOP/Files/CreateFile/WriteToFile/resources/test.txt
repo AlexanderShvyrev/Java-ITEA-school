@@ -1,1 +1,2 @@
 Hello This is some random text that will have some more text added to it with the code!
+Hi! I am a new text here!
