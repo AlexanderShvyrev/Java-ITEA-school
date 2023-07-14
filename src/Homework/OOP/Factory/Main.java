@@ -23,10 +23,16 @@ public class Main {
 
             Producable factory;
                 switch (version) {
-                    case "1" -> factory = new ArtDecoProduction();
-                    case "2" -> factory = new VictorianProduction();
-                    case "3" -> factory = new ModernProduction();
-                    default -> {
+                    case "1":
+                        factory = new ArtDecoProduction();
+                        break;
+                    case "2":
+                        factory = new VictorianProduction();
+                        break;
+                    case "3":
+                        factory = new ModernProduction();
+                        break;
+                    default: {
                         System.out.println("Invalid choice.");
                         continue;
                     }

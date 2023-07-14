@@ -3,7 +3,7 @@ package Homework.OOP.Reflection;
 public class Animal {
     private String type;
     protected String name;
-    public static final int AGE = 10;
+    public static final Integer AGE = 10;
 
     public Animal(String type, String name) {
         this.type = type;
@@ -18,7 +18,7 @@ public class Animal {
         return name;
     }
 
-    public static int getAge(){
+    public static Integer getAge(){
         return AGE;
     }
 }
