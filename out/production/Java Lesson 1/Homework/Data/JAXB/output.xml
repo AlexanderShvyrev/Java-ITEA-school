@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<address size="big">
-    <city>New York</city>
+<address>
+    <city size="big">New York</city>
     <country>USA</country>
     <street>Wall st</street>
 </address>
