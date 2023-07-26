@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class A {
 
-    public synchronized void a(B b){
+    public void a(B b){
         System.out.println("a is running");
         try{
             TimeUnit.SECONDS.sleep(2);
@@ -13,8 +13,10 @@ public class A {
         }
 
         System.out.println("a is calling b");
-        synchronized (b) {
-            b.methodB();
+        synchronized (this) {
+            synchronized (b) {
+                b.methodB();
+            }
         }
     }
 

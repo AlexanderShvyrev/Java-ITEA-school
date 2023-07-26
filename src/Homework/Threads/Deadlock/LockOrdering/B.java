@@ -3,7 +3,7 @@ package Homework.Threads.Deadlock.LockOrdering;
 import java.util.concurrent.TimeUnit;
 
 public class B {
-    public synchronized void b(A a){
+    public void b(A a){
         System.out.println("b is running");
         try{
             TimeUnit.SECONDS.sleep(2);
@@ -11,8 +11,10 @@ public class B {
             e.printStackTrace();
         }
         System.out.println("b is calling a");
-        synchronized (a) {
-            a.methodA();
+        synchronized (this) {
+            synchronized (a) {
+                a.methodA();
+            }
         }
     }
 
